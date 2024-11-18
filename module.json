@@ -1,0 +1,29 @@
+{
+    "name": "FilamentDiscordDriver",
+    "alias": "filament-discord-driver",
+    "description": {
+        "ar": "Discord Server WebHook Notification for Filament Alerts Sender",
+        "en": "Discord Server WebHook Notification for Filament Alerts Sender",
+        "gr": "Discord Server WebHook Notification for Filament Alerts Sender",
+        "sp": "Discord Server WebHook Notification for Filament Alerts Sender"
+    },
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "TomatoPHP\\FilamentDiscordDriver\\FilamentDiscordDriverServiceProvider"
+    ],
+    "files": [],
+    "title": {
+        "ar": "Filament discord driver",
+        "en": "Filament discord driver",
+        "gr": "Filament discord driver",
+        "sp": "Filament discord driver"
+    },
+    "color": "#cc1448",
+    "icon": "heroicon-c-users",
+    "placeholder": "https://raw.githubusercontent.com/tomatophp/filament-discord-driver/master/art/3x1io-tomato-discord-driver.jpg",
+    "type": "plugin",
+    "version": "v1.0.0",
+    "github" : "https://github.com/tomatophp/filament-discord-driver",
+    "docs" : "https://github.com/tomatophp/filament-discord-driver"
+}
