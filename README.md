@@ -1,4 +1,4 @@
-![Screenshot](https://raw.githubusercontent.com/tomatophp/filament-discord-driver/master/art/3x1io-tomato-discord-driver.jpg)
+![Screenshot](https://raw.githubusercontent.com/tomatophp/filament-discord-driver/master/arts/3x1io-tomato-discord-driver.jpg)
 
 # Filament Discord Driver
 
@@ -13,10 +13,10 @@ Discord Server WebHook Notification for [Filament Alerts Sender](https://github.
 
 ## Screenshots
 
-![Preview](https://raw.githubusercontent.com/tomatophp/filament-discord-driver/master/art/preview.png)
-![Setting Hub](https://raw.githubusercontent.com/tomatophp/filament-discord-driver/master/art/setting-hub.png)
-![Settings](https://raw.githubusercontent.com/tomatophp/filament-discord-driver/master/art/settings.png)
-![Driver](https://raw.githubusercontent.com/tomatophp/filament-discord-driver/master/art/driver.png)
+![Preview](https://raw.githubusercontent.com/tomatophp/filament-discord-driver/master/arts/preview.png)
+![Setting Hub](https://raw.githubusercontent.com/tomatophp/filament-discord-driver/master/arts/setting-hub.png)
+![Settings](https://raw.githubusercontent.com/tomatophp/filament-discord-driver/master/arts/settings.png)
+![Driver](https://raw.githubusercontent.com/tomatophp/filament-discord-driver/master/arts/driver.png)
 
 ## Installation
 
