@@ -2,6 +2,7 @@
 
 namespace TomatoPHP\FilamentDiscordDriver\Services;
 
+use Filament\Notifications\Notification;
 use TomatoPHP\FilamentAlerts\Services\Drivers\Driver;
 use TomatoPHP\FilamentDiscordDriver\Jobs\NotifyDiscordJob;
 
@@ -23,7 +24,8 @@ class DiscordDriver extends Driver
         ?string $type = 'info',
         ?string $action = 'system',
         ?array $data = [],
-        ?int $template_id = null
+        ?int $template_id = null,
+        ?Notification $notification = null
     ): void {
         dispatch(new NotifyDiscordJob([
             'title' => $title,
