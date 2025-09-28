@@ -33,6 +33,6 @@ class DiscordDriver extends Driver
             'url' => $url,
             'webhook' => config('filament-discord-driver.webhook'),
             'image' => $image,
-        ]));
+        ]))->onQueue(config('filament-alerts.queue'));
     }
 }

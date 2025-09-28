@@ -10,7 +10,7 @@ class DiscordSettings extends Settings
 
     public ?string $discord_error_webhook = null;
 
-    public bool $discord_error_webhook_active = false;
+    public ?bool $discord_error_webhook_active = false;
 
     public static function group(): string
     {

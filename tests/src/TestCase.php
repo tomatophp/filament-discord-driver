@@ -9,13 +9,14 @@ use Filament\FilamentServiceProvider;
 use Filament\Forms\FormsServiceProvider;
 use Filament\Infolists\InfolistsServiceProvider;
 use Filament\Notifications\NotificationsServiceProvider;
+use Filament\Schemas\SchemasServiceProvider;
 use Filament\SpatieLaravelSettingsPluginServiceProvider;
 use Filament\Support\SupportServiceProvider;
 use Filament\Tables\TablesServiceProvider;
 use Filament\Widgets\WidgetsServiceProvider;
-use GeneaLabs\LaravelModelCaching\Providers\Service;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\LazilyRefreshDatabase;
 use Livewire\LivewireServiceProvider;
+use Orchestra\Testbench\Attributes\WithEnv;
 use Orchestra\Testbench\Concerns\WithWorkbench;
 use Orchestra\Testbench\TestCase as BaseTestCase;
 use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
@@ -30,9 +31,10 @@ use TomatoPHP\FilamentDiscordDriver\Tests\Models\User;
 use TomatoPHP\FilamentIcons\FilamentIconsServiceProvider;
 use TomatoPHP\FilamentSettingsHub\FilamentSettingsHubServiceProvider;
 
+#[WithEnv('DB_CONNECTION', 'testing')]
 abstract class TestCase extends BaseTestCase
 {
-    use RefreshDatabase;
+    use LazilyRefreshDatabase;
     use WithWorkbench;
 
     protected function setUp(): void
@@ -56,7 +58,7 @@ abstract class TestCase extends BaseTestCase
 
     protected function getPackageProviders($app): array
     {
-        return [
+        $providers = [
             ActionsServiceProvider::class,
             BladeCaptureDirectiveServiceProvider::class,
             BladeHeroiconsServiceProvider::class,
@@ -73,12 +75,16 @@ abstract class TestCase extends BaseTestCase
             MediaLibraryServiceProvider::class,
             SpatieLaravelSettingsPluginServiceProvider::class,
             FilamentIconsServiceProvider::class,
-            Service::class,
+            SchemasServiceProvider::class,
             FilamentSettingsHubServiceProvider::class,
             FilamentAlertsServiceProvider::class,
             FilamentDiscordDriverServiceProvider::class,
             AdminPanelProvider::class,
         ];
+
+        sort($providers);
+
+        return $providers;
     }
 
     public function getEnvironmentSetUp($app): void

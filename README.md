@@ -1,4 +1,4 @@
-![Screenshot](https://raw.githubusercontent.com/tomatophp/filament-discord-driver/master/arts/3x1io-tomato-discord-driver.jpg)
+![Screenshot](https://raw.githubusercontent.com/tomatophp/filament-discord-driver/master/arts/fadymondy-tomato-discord-driver.jpg)
 
 # Filament Discord Driver
 
