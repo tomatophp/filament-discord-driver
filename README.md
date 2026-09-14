@@ -13,10 +13,18 @@ Discord Server WebHook Notification for [Filament Alerts Sender](https://github.
 
 ## Screenshots
 
-![Preview](https://raw.githubusercontent.com/tomatophp/filament-discord-driver/master/arts/preview.png)
-![Setting Hub](https://raw.githubusercontent.com/tomatophp/filament-discord-driver/master/arts/setting-hub.png)
-![Settings](https://raw.githubusercontent.com/tomatophp/filament-discord-driver/master/arts/settings.png)
-![Driver](https://raw.githubusercontent.com/tomatophp/filament-discord-driver/master/arts/driver.png)
+| Light | Dark |
+|-------|------|
+| ![Settings](https://raw.githubusercontent.com/tomatophp/filament-discord-driver/master/arts/settings-light.png) | ![Settings](https://raw.githubusercontent.com/tomatophp/filament-discord-driver/master/arts/settings-dark.png) |
+| ![Settings Hub](https://raw.githubusercontent.com/tomatophp/filament-discord-driver/master/arts/settings-hub-light.png) | ![Settings Hub](https://raw.githubusercontent.com/tomatophp/filament-discord-driver/master/arts/settings-hub-dark.png) |
+| ![Driver](https://raw.githubusercontent.com/tomatophp/filament-discord-driver/master/arts/drivers-light.png) | ![Driver](https://raw.githubusercontent.com/tomatophp/filament-discord-driver/master/arts/drivers-dark.png) |
+
+## Requirements
+
+| Package version | Filament | Laravel     | PHP  |
+|-----------------|----------|-------------|------|
+| 5.x             | 5.x      | 12.x, 13.x  | 8.2+ |
+| 4.x             | 4.x      | 11.x, 12.x  | 8.2+ |
 
 ## Installation
 

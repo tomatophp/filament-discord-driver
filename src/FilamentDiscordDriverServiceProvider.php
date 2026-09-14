@@ -4,6 +4,7 @@ namespace TomatoPHP\FilamentDiscordDriver;
 
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
+use TomatoPHP\FilamentDiscordDriver\Console\FilamentDiscordDriverInstall;
 
 class FilamentDiscordDriverServiceProvider extends ServiceProvider
 {
@@ -11,7 +12,7 @@ class FilamentDiscordDriverServiceProvider extends ServiceProvider
     {
         // Register generate command
         $this->commands([
-            \TomatoPHP\FilamentDiscordDriver\Console\FilamentDiscordDriverInstall::class,
+            FilamentDiscordDriverInstall::class,
         ]);
 
         // Register Config file
@@ -53,9 +54,18 @@ class FilamentDiscordDriverServiceProvider extends ServiceProvider
     public function boot(): void
     {
         try {
-            Config::set('filament-discord-driver.webhook', setting('discord_webhook'));
-            Config::set('filament-discord-driver.error-webhook', setting('discord_error-webhook'));
-            Config::set('filament-discord-driver.error-webhook-active', setting('discord_error-webhook-active'));
+            // Settings saved from the settings hub win over the env based config, empty settings keep the config value.
+            foreach ([
+                'webhook' => 'discord_webhook',
+                'error-webhook' => 'discord_error_webhook',
+                'error-webhook-active' => 'discord_error_webhook_active',
+            ] as $config => $setting) {
+                $value = setting($setting);
+
+                if (filled($value)) {
+                    Config::set("filament-discord-driver.{$config}", $value);
+                }
+            }
         } catch (\Exception $e) {
             \Log::error($e);
         }

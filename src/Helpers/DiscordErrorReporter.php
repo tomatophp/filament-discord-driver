@@ -2,6 +2,7 @@
 
 namespace TomatoPHP\FilamentDiscordDriver\Helpers;
 
+use Carbon\Carbon;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Throwable;
 use TomatoPHP\FilamentDiscordDriver\Jobs\NotifyDiscordJob;
@@ -19,7 +20,7 @@ class DiscordErrorReporter
                         'message' => collect([
                             'File: ' . $e->getFile(),
                             'Line: ' . $e->getLine(),
-                            'Time: ' . \Carbon\Carbon::now()->toDateTimeString(),
+                            'Time: ' . Carbon::now()->toDateTimeString(),
                             'Trace: ```' . str($e->getTraceAsString())->limit(2500) . '```',
                         ])->implode("\n"),
                         'url' => url()->current(),
