@@ -2,6 +2,12 @@
     "name": "tomatophp/filament-discord-driver",
     "type": "library",
     "description": "Discord Server WebHook Notification for Filament Alerts Sender",
+    "homepage": "https://tomatophp.com/en/plugins/filament-discord-driver",
+    "support": {
+        "issues": "https://github.com/tomatophp/filament-discord-driver/issues",
+        "source": "https://github.com/tomatophp/filament-discord-driver",
+        "docs": "https://tomatophp.com/en/plugins/filament-discord-driver"
+    },
     "keywords": [
         "php",
         "laravel",
